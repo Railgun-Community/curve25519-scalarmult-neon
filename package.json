@@ -20,8 +20,10 @@
     "install": "npm run build-release",
     "test": "cargo test && tape test/*.js"
   },
+  "dependencies": {
+    "cargo-cp-artifact": "^0.1"
+  },
   "devDependencies": {
-    "cargo-cp-artifact": "^0.1",
     "tape": "^5.6.1"
   }
 }
