@@ -1,6 +1,6 @@
 {
   "name": "@railgun-community/curve25519-scalarmult-neon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node.js addon for Curve25519 scalar multiplication written in Rust",
   "author": "RAILGUN Contributors",
   "license": "MIT",
