@@ -1,5 +1,5 @@
-use std::convert::TryInto;
 use neon::prelude::*;
+use std::convert::TryInto;
 
 use curve25519_dalek::edwards::CompressedEdwardsY;
 use curve25519_dalek::edwards::EdwardsPoint;
@@ -34,22 +34,8 @@ fn scalarmult(mut cx: FunctionContext) -> JsResult<JsArrayBuffer> {
     Ok(output)
 }
 
-
-fn init(mut cx: FunctionContext) -> JsResult<JsPromise> {
-    let (deferred, promise) = cx.promise();
-    let result = cx.null();
-    deferred.resolve(&mut cx, result);
-    Ok(promise)
-}
-
 #[neon::main]
 fn main(mut cx: ModuleContext) -> NeonResult<()> {
-    let exports = cx.exports_object()?;
-    let js_init = JsFunction::new(&mut cx, init)?;
-    let js_scalar_multiply = JsFunction::new(&mut cx, scalarmult)?;
-    let tru = cx.boolean(true);
-    exports.set(&mut cx, "default", js_init)?;
-    exports.set(&mut cx, "scalarMultiply", js_scalar_multiply)?;
-    exports.set(&mut cx, "__esModule", tru)?;
+    cx.export_function("scalarmult", scalarmult)?;
     Ok(())
 }
