@@ -9,7 +9,7 @@ git fetch;
 git checkout release --;
 git rebase origin/main;
 npm version $VERSION_TYPE;
-git push -f;
+git push -f origin release;
 git checkout main;
 git rebase origin/release;
 git push --tags --no-verify;
