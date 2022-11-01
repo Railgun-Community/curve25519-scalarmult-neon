@@ -3,7 +3,7 @@
 const runtimeRequire =
   typeof __webpack_require__ === 'function' ? __non_webpack_require__ : require;
 
-const {scalarmult} = runtimeRequire('./index.node');
+const {scalarmult} = runtimeRequire(__dirname + '/index.node');
 
 module.exports = {
   scalarMultiply(point, scalar) {
