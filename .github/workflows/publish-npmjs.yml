@@ -2,7 +2,7 @@ name: Publish Package to npmjs
 on:
   push:
     # Sequence of patterns matched against refs/heads
-    branches:    
+    branches:
       - release
 jobs:
   build:
@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm install -g cargo-cp-artifact
+      - run: npm install -g cargo-cp-artifact2
       - run: npm run build
       - run: npm publish --access public
         env:
