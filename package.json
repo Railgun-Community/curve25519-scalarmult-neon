@@ -18,6 +18,7 @@
     "build-debug": "npm run build --",
     "build-release": "npm run build -- --release",
     "install": "npm run build-release",
+    "postinstall": "node postinstall.js",
     "test": "cargo test && npm run build-debug && tape test/*.js"
   },
   "dependencies": {
