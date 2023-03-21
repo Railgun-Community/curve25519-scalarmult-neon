@@ -106,5 +106,5 @@ npx prebuild-for-nodejs-mobile ios-arm64 --verbose
 ```
 
 ```
-npx prebuild-for-nodejs-mobile ios-x64 --sdk31 --verbose
+npx prebuild-for-nodejs-mobile ios-x64 --verbose
 ```
