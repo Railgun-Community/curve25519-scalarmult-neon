@@ -1,6 +1,6 @@
 [package]
 name = "curve25519-scalarmult-neon"
-version = "0.1.0"
+version = "0.1.10"
 license = "MIT"
 edition = "2018"
 exclude = ["index.node"]
@@ -15,6 +15,9 @@ curve25519-dalek = "3"
 hex = "0.4"
 
 [dependencies.neon]
-version = "0.10"
+version = "0.10.1"
 default-features = false
-features = ["napi-6", "promise-api"]
+features = ["napi-5"]
+# Note: neon@0.10.1 with napi-6 uses AtomicU64, not supported in armeabi-v7a
+# See https://github.com/neon-bindings/neon/blob/fe4642e7c126b4bffb16be5c655e57bc0ef3432d/crates/neon/src/sys/mod.rs#L34-L35
+# and https://github.com/neon-bindings/neon/blob/fe4642e7c126b4bffb16be5c655e57bc0ef3432d/crates/neon/src/lifecycle.rs#L15
