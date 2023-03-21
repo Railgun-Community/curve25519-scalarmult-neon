@@ -13,6 +13,14 @@
     "url": "https://github.com/Railgun-Community/curve25519-scalarmult-neon/issues"
   },
   "main": "index.js",
+  "files": [
+    "index.js",
+    "postinstall.js",
+    "src/*",
+    "prebuilds/*",
+    "Cargo.lock",
+    "Cargo.toml"
+  ],
   "scripts": {
     "build": "cargo-cp-artifact2 --npm cdylib index.node -- cargo build --message-format=json-render-diagnostics",
     "build-debug": "npm run build --",
