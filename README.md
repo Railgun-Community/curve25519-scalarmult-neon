@@ -72,7 +72,7 @@ rustup target add aarch64-linux-android
 rustup target add x86_64-linux-android
 ```
 
-Use Android NDK version 24 or higher by ensuring you have the env var `ANDROID_NDK_HOME` pointed at the NDK 24 directory. If you get a compilation error about `-lgcc`, you might have to apply [this hack deep in your NDK](https://stackoverflow.com/questions/68873570/how-do-i-fix-ld-error-unable-to-find-library-lgcc-when-cross-compiling-rust).
+Use Android NDK version 24 or higher by ensuring you have the env var `ANDROID_NDK_HOME` pointed at the NDK 24 directory. If you get a compilation error about `-lgcc`, you might have to apply [this hack deep in your NDK](https://stackoverflow.com/a/74041320/315752).
 
 ```
 npx prebuild-for-nodejs-mobile android-arm --sdk31 --verbose
